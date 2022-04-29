@@ -622,7 +622,7 @@ namespace transform_tree_glm {
             }
             inline void advance()
             {
-                int depth = stack.size()-1;
+                int depth = static_cast<int>(stack.size()-1);
                 auto it = stack.back().it;
                 if (it == end) return;
                 int old_depth = it.depth();
